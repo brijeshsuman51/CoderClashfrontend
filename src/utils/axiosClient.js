@@ -29,8 +29,8 @@
 import axios from 'axios';
 
 const axiosClient = axios.create({
-    baseURL:'https://coder-clashbackend.vercel.app',
-    // baseURL: 'http://localhost:3000',
+    // baseURL:'https://coder-clashbackend.vercel.app',
+    baseURL: 'http://localhost:3000',
     withCredentials: true,
     headers: {
         'Content-Type': 'application/json'
