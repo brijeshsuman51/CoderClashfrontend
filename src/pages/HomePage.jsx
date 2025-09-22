@@ -19,7 +19,7 @@ function HomePage() {
         const fetchProblems = async () => {
             try {
                 const { data } = await axiosClient.get('/problem/getAllProblem');
-                setProblems(Array.isArray(data) ? data : data?.problems || []);
+                setProblems( data );
             } catch (error) {
                 console.error("Error fetching Problems:", error);
                 setProblems([]);
@@ -29,7 +29,7 @@ function HomePage() {
         const fetchSolvedProblems = async () => {
             try {
                 const { data } = await axiosClient.get("/problem/problemSolvedByUser");
-                setSolvedProblems(Array.isArray(data) ? data : []);
+                setSolvedProblems( data);
             } catch (error) {
                 console.error("Error fetching solved problems:", error);
                 setSolvedProblems([]);
